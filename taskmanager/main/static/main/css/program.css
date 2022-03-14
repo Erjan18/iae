@@ -1,0 +1,11 @@
+.program{
+    color: rgb(33,37,41);
+
+    padding-top: 120px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.program__day p{
+    line-height: 1.5em;
+}

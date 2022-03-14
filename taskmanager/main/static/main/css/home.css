@@ -1,0 +1,17 @@
+.home{
+    background-color: #000;
+
+    color: rgb(187,187,187)
+}
+
+.home__container{
+    box-sizing: border-box;
+
+    padding: 40px 15px;
+}
+
+.home__author{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}

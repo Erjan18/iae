@@ -1,0 +1,67 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}
+Комитет конференции — iaeee.kg
+{% endblock %}
+
+{% block css %}
+    {%  load    static %}
+    <link rel="stylesheet" href="{% static 'main/css/comitet.css' %}">
+{% endblock %}
+
+
+{% block logo %}
+{%  load    static %}
+{% static 'main/img/logo.png' %}
+{% endblock %}
+
+{% block content %}
+    <div class="comitet">
+        <div class="comitet__container container">
+            <div class="title">Организационный комитет</div>
+            {% for el in comitet %}
+                {% if el.type == "1" %}
+                    <div class="user">
+                        <div class="text">
+                            <p class="name bold">{{ el.name }}</p>
+                            <p class="company">{{ el.country }}</p>
+                            <p class="posititon">{{ el.position }}</p>
+
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="comitet__container container">
+            <div class="title">Иcполнительный международый комитет</div>
+            {% for el in comitet %}
+                {% if el.type == "2" %}
+                    <div class="user">
+                        <div class="text">
+                            <p class="name bold">{{ el.name }}</p>
+                            <p class="company">{{ el.country }}</p>
+                            <p class="posititon">{{ el.position }}</p>
+
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+        </div>
+        <div class="comitet__container container">
+            <div class="title">Научный комитет</div>
+            {% for el in comitet %}
+                {% if el.type == "3" %}
+                    <div class="user">
+                        <div class="text">
+                            <p class="name bold">{{ el.name }}</p>
+                            <p class="company">{{ el.country }}</p>
+                            <p class="posititon">{{ el.position }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}
+2020.iaeee.kg — МАЭСС
+{% endblock %}
+
+{% block css %}
+    {%  load    static %}
+    <link rel="stylesheet" href="{% static 'main/css/into.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/home.css' %}">
+{% endblock %}
+
+
+{% block logo %}
+{%  load    static %}
+{% static 'main/img/logo.png' %}
+{% endblock %}
+
+{% block content %}
+    <section class="into">
+        <div class="into__content container">
+            <div class="into__subtitle">
+                Посвященная Международному году устойчивого горного развития
+            </div>
+            <div class="into__title">
+                III Международная научно - практическая конференция
+
+            </div>
+            <div class="into__subtitle">
+                по сейсмостойкому строительству
+            </div>
+            <div class="into__event-date">
+                <span class="into__date">с 4 по 9 июля 2022 года</span> |
+                <span class="into__location"> г. Бишкек /  Иссык-Куле</span>
+            </div>
+            <div class="button">
+                <a href="">
+                    Регистрация
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main class="home">
+        <div class="home__container container">
+            <h1 class="title">Уважаемые коллеги, партнеры и друзья!</h1>
+            <div class="text">
+                <p>
+                    Международная Ассоциация экспертов по сейсмостойкому строительству
+                    (МАЭСС) объявляет о начале подготовки III Международной научно-практической
+                    конференции по сейсмостойкому строительству, посвященной Международному году
+                    устойчивого горного развития (вебсайт Конференции icee.kg).
+                </p>
+                <p>
+                    По инициативе Президента Кыргызской Республики в резолюции Пленарного заседания
+                    76-сессии Генеральной Ассамблеи ООН, 2022 год объявлен – Международным годом
+                    устойчивого горного развития.
+                </p>
+                <p>
+                    Конференция проводится в гибридной форме (онлайн и офлайн) в г. Бишкек и на
+                    Иссык-Куле с 4 по 9 июля 2022 года.
+                </p>
+                <p>
+                    Запланируйте ваше участие, приезд и встречу в г. Бишкек и на Иссык-Куле с сегодняшнего дня!
+                </p>
+            </div>
+
+            <div class="home__author">
+                <div>
+                    <p>С уважением,</p>
+                    <p>Президент МАЭСС,</p>
+                    <p>У.Т. Бегалиев</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    </html>
+{% endblock %}

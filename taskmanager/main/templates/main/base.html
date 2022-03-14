@@ -1,0 +1,111 @@
+{%  load    static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF__8">
+    <meta http__equiv="X__UA__Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device__width, initial__scale=1.0">
+    <title>{% block title%}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'main/css/elements.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    {% block css%}{% endblock %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body id="home">
+    <header class="header">
+        <div class="container header__container">
+            <img src= {% block logo %}{% endblock %} class="header__logo">
+
+            <ul class="header__items">
+                <a href="/social-events" class="header__item">
+                    <li >Speakers</li>
+                </a>
+                <a href="social-events" class="header__item">
+                    <li>Agenda</li>
+                </a>
+                <a href="" class="header__item">
+                    <li>Tickets</li>
+                </a>
+                <a href="" class="header__item">
+                    <li>Impressions</li>
+                </a>
+                <a href="" class="header__item">
+                    <li>FAQ</li>
+                </a>
+            </ul>
+            <div class="header__langs">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Russia.png/800px-Flag_of_Russia.png" class="header__lang">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/640px-Flag_of_the_United_Kingdom_%283-5%29.svg.png" class="header__lang">
+            </div>
+            <div class="burger__icon">
+                <div class="burger__line-1"></div>
+                <div class="burger__line-2"></div>
+                <div class="burger__line-3"></div>
+            </div>
+
+        </div>
+        <div class="burger__items">
+            <div class="burger__item"><div class="container"><a href="">Speakers</a></div></div>
+            <div class="burger__item"><div class="container"><a href="">Agenda</a></div></div>
+            <div class="burger__item"><div class="container"><a href="">Tickets</a></div></div>
+            <div class="burger__item"><div class="container"><a href="">Impressions</a></div></div>
+            <div class="burger__item"><div class="container"><a href="">FAQ</a></div></div>
+        </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer class="footer">
+        <div class="container footer__container">
+<!--
+            <div class="footer__title">
+                POWERED BY
+            </div>
+-->
+
+<!--
+                <div class="footer__company-logo">
+                    <img src="imgs\Миа.png" alt="logo" title="logo">
+                </div>
+-->
+
+
+            <p class="footer__contact">
+                <span title="web-size">III Конференции МАЭСС:
+                    <a href="icee.kg">icee.kg</a>
+                </span> |
+                <span title="WhatsApp">WhatsApp:
+                    <a href="https://wa.me/996779141012">+996 779 141 012 Эльмира М. Аширбаева</a>;
+                    <a href="https://wa.me/996705908941">996 705 908 941 Айдарбек К. Стамов</a>
+                </span> |
+                <span>Kyrgyzstan</span> |
+                <span>Bishkek</span> |
+                <span title="seismokg@mail.ru">e-mail: <a href="mailto:seismokg@mail.ru" alt="seismokg@mail.ru">seismokg@mail.ru</a></span>
+
+            </p>
+<!--
+            <p class = "footer__legal-data">
+                <a href="" title="Terms Of Use">Terms Of Use</a>
+                <a href="" title="Privacy Policy">Privacy Policy</a>
+                <a href="" title="Imprint">Imprint</a>
+            </p>
+-->
+            <a class="footer__to-home to-home" href="#home">
+                <div class="text">
+                    TOP OF PAGE
+                </div>
+                <img src="https://static.growthmarketingsummit.com/2020/to-top.gif" alt="">
+            </a>
+        </div>
+    </footer>
+
+    <script src="{%static 'main/js/jquery.js' %}"></script>
+    <script src="{%static 'main/js/main.js' %}"></script>
+</body>
+</html>

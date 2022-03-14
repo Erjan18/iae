@@ -1,0 +1,41 @@
+.reg{
+    color: #212529;
+    padding-top: 120px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 50px;
+}
+
+input,
+textarea{
+    opacity: unset;
+    outline: none;
+
+    width: 320px;
+
+    border: none;
+    border: 1px #212529 solid;
+
+    background-color: initial;
+    color: inherit;
+
+    padding: 5px 10px;
+}
+@media screen and (max-width: 350px){
+    textarea{
+        width:250px;
+    }
+}
+
+form > div{
+    margin-bottom: 20px;
+}
+
+form p{
+    margin-bottom: 5px;
+}
+
+.reg__button{
+    margin: 0px;
+    margin-left: auto;
+}

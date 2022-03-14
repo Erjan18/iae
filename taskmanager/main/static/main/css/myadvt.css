@@ -1,0 +1,16 @@
+.myadvts{
+    padding-top: 70px;
+    color: rgb(33,37,41);
+}
+
+.myadvt1{
+    box-sizing: border-box;
+    padding: 50px 15px;
+
+}
+
+.myadvt2{
+    box-sizing: border-box;
+    padding: 50px 15px;
+    background-color: rgb(170, 170, 170);
+}

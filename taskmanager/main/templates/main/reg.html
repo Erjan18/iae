@@ -1,0 +1,99 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}
+Регистрация
+{% endblock %}
+
+{% block css %}
+    {%  load    static %}
+    <link rel="stylesheet" href="{% static 'main/css/reg.css' %}">
+{% endblock %}
+
+
+{% block logo %}
+{%  load    static %}
+{% static 'main/img/logo.png' %}
+{% endblock %}
+
+{% block content %}
+
+    <style>
+        select{
+            opacity: unset;
+            outline: none;
+
+            border: none;
+            border: 1px #212529 solid;
+
+            background-color: initial;
+            color: inherit;
+
+            padding: 5px 10px;
+        }
+    </style>
+    <div class="reg">
+        <h2 class="title">Регистрация</h2>
+        <div class="reg__container container">
+        <form method="post">
+            {% csrf_token %}
+            <div class="type">
+                <label>Тип </label>
+                {{ form.type }}
+            </div>
+            <div class="name">
+                <p>Ф.И.О.</p>
+                {{ form.name }}
+            </div>
+            <div class="position">
+                <p>Ученое звание</p>
+                {{ form.position  }}
+            </div>
+            <div class="theme">
+                <p>Тема научного доклада</p>
+                {{ form.theme  }}
+            </div>
+            <div class="format">
+                <label>Форма участия </label>
+                {{ form.format }}
+            </div>
+            <div class="company">
+                <p>Организация</p>
+                {{ form.company }}
+            </div>
+            <div class="status">
+                <p>Должность</p>
+                 {{ form.status }}
+            </div>
+            <div class="email">
+                <p>e-mail</p>
+                {{ form.email  }}
+            </div>
+            <div class="tel">
+                <p>Номер вашего телефона</p>
+                {{ form.tel  }}
+            </div>
+            <div class="city">
+                <p>Город</p>
+                {{ form.city  }}
+            </div>
+            <div class="country">
+                <p>Страна</p>
+                {{ form.country  }}
+            </div>
+            <div class="discription">
+                <p>Описание доклада</p>
+                {{ form.discription }}
+            </div>
+
+            <button class="button reg__button" type="submit">Зарегистрироваться</button>
+            {% if res == 'Регистрация успешно завершена!' %}
+                <p style="color:green"> {{ res }} </p>
+            {% else %}
+                <p style="color:red"> {{ res }} </p>
+            {% endif %}
+        </form>
+
+        </div>
+    </div>
+{% endblock %}
